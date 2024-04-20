@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <link rel="icon" href="favicon.ico" type="image/x-icon" />
+        <link rel="icon" type="image/png" sizes="32x32" href="{{ url_for('static', filename='images/pawww.png') }}">
+        <link rel="icon" type="image/png" sizes="16x16" href="{{ url_for('static', filename='images/pawww.png') }}">
+        <title>Paw donate</title>
+
+        <style>
+            body, html {
+                height: 100%;
+                margin: 0;
+            }
+    
+            body {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                text-align: center;
+                position: relative; 
+                background-image: url("{{ url_for('static', filename='images/back.png') }}");
+                background-size: cover;
+                background-repeat: no-repeat;
+                background-position: center center;
+            }
+    
+            .advice {
+                font-size: 20px;
+                color: white;
+                position: absolute; 
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+            }
+        </style>
+     
+ 
+</head>
+
+<body>
+    <div class="advice" >
+        <h1>Are you new to us?</h1>
+        <h1>Please register first!</h1>
+    </div>
+
+    <script>
+        setTimeout(function() {
+            window.location.href = "{{ url_for('register') }}";
+        }, 1500);  
+    </script>
+</body>
+</html>

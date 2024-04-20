@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<body class="bgforsignin" style="background-image: url({{ url_for('static', filename='images/back.png') }});">
+  <div data-aos="zoom-in" >
+    <div class="card mb-3 floating-card-signin" style="max-width: 30%; padding: 0; background-color: rgba(255, 255, 255, 0.3); backdrop-filter: blur(10px);">
+      <div class="row g-0">
+        <div class="col-12 col-md-8" style="padding: 0;">
+          <div class="card-body" style="textalign : center">
+            <h1 class="card-title" >Sign In</h1>
+
+            <form action="{{ request.path }}" method="POST" style="textalign: center;">
+              <label for="Name"><b>Username</b></label><br>
+              <input type="text" name="Name" placeholder="Username" style="background-color: rgba(255, 255, 255, 0); border: 1px solid" required/><br>
+                    
+              <label for="Password"><b>Password</b></label><br>
+              <input type= "password" name="Password" placeholder="Password" style="background-color: rgba(255, 255, 255, 0); border: 1px solid "required/><br>
+              <p> </p>
+
+              <input type="submit" value="Submit"  /><br>
+            </form>
+
+            <div>Are you new to us?<a href="{{ url_for('register')}}" >Register</a></div>
+          </div>
+        </div>  
+      </div>
+    </div>
+  </div>
+</body>
+
+
+<footer class="footer2">
+  <a class="nav-link-footer" href="{{ url_for('about') }}" >About</a>
+  <a class="nav-link-footer"  href="{{ url_for('history')}}" >History</a>
+  <a class="nav-link-footer"  href="{{ url_for('service')}}" >Service</a> 
+  <a class="nav-link-footer"  href="{{ url_for('contact')}}" >Contact us</a> 
+    <a class="nav-link-footer"  href="{{ url_for('help')}}" >Help</a> 
+</footer>
+{% endblock %}

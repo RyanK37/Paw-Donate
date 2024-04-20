@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+{% block content %}
+<body style="background-image: url({{ url_for('static', filename='images/back.png') }})">
+  <div data-aos="zoom-in">
+    <div class="card mb-3 floating-cardforhistory" style="max-width: 70%; max-height: 80%; padding: 0; textalign : center;background-color: rgba(255, 255, 255, 0)">
+      <div class="row g-0">
+        <div class="col-12 col-md-8" style="padding: 0; background-color: rgba(255, 255, 255, 0)">
+          <div class="card-body" >
+            <h1 class="card-title1" >Founder of Paw Donate.</h1>
+            <p class="card-text" style="font-size: 20px; font-weight:500">The name of founder is Ryan.He did this website as a school's assignment.The idea of this website is based on saving every species of the world by helping financially.</p>
+            <p class="card-text" style="font-size: 20px"><h2>Do Good Feel Good!</h2></p>
+            
+            <a href="{{ url_for('contact')}}" class="btn btn-primary1" >Find out more...</a>
+          </div>
+        </div>
+          
+        <div class="col-12 col-md-4">
+          <img src="{{url_for('static', filename='/images/Kucing.jpg')}}" style="width: 300px;  height: 350px;" class="img-fluid " alt="yo">
+        </div> 
+      </div>
+    </div>
+  </div>
+</body>
+
+  <footer class="footer2">
+    <a class="nav-link-footer" href="{{ url_for('about') }}" >About</a>
+    <a class="nav-link-footer"  href="{{ url_for('history')}}" >History</a>
+    <a class="nav-link-footer"  href="{{ url_for('service')}}" >Service</a> 
+    <a class="nav-link-footer"  href="{{ url_for('contact')}}" >Contact us</a> 
+    <a class="nav-link-footer"  href="{{ url_for('help')}}" >Help</a> 
+  </footer>
+
+
+    
+{% endblock %}

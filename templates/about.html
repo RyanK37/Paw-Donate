@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="card text-bg-dark">
+    <img src="{{ url_for('static', filename='images/back.png') }}" class="card-img" alt="back">
+    <div class="card-img-overlay" style="text-align: center">
+      <h1 class="card-title1" style="color:white">What we do?</h1>
+      <p class="card-text1"style="color:#FFFAFA; font-size:20px">This webiste is to connect and work together with local and international orgranizations in which everyone goal is to make a better world. </p>
+      <a href="{{ url_for('contact')}}" class="btn btn-primary" style="color: white; background: #676767">Find out more...</a>
+    </div>
+</div>
+
+<footer class="footer1">
+    <a class="nav-link-footer" href="{{ url_for('about') }}" >About</a>
+    <a class="nav-link-footer"  href="{{ url_for('history')}}" >History</a>
+    <a class="nav-link-footer"  href="{{ url_for('service')}}" >Service</a> 
+    <a class="nav-link-footer"  href="{{ url_for('contact')}}" >Contact us</a> 
+    <a class="nav-link-footer"  href="{{ url_for('help')}}" >Help</a> 
+</footer>
+{% endblock %}
